@@ -1,0 +1,147 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+    transition: background-color 0.4s ease;
+}
+
+/* NAVIGATION */
+header {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin: 15px 0;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #38bdf8;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #0284c7;
+}
+
+/* CONTENT SECTIONS */
+.card-section {
+    padding: 60px 10%;
+}
+
+.card-section h2 {
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+/* GRID LAYOUT */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.project-card,
+.skill-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover,
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* DARK MODE */
+.dark-mode {
+    background-color: #0f172a;
+    color: white;
+}
+
+.dark-mode .card-section h2 {
+    color: #38bdf8;
+}
+
+.dark-mode .project-card,
+.dark-mode .skill-card {
+    background-color: #1e293b;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
